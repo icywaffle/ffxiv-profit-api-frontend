@@ -23,7 +23,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
     const classes = useStyles()
-    var homeURL = window.location.origin
+    // Parse the window location to know what domain we're at
+    var URLParts = window.location.hostname
+    var firstDotPosition = URLParts.indexOf(".")
+    var homeURL = URLParts.substring(firstDotPosition + 1)
+    // If we're localhost, then we have to describe by port, otherwise map to main domain
     if (window.location.hostname === "localhost") {
         homeURL = "http://localhost:3000"
     }
