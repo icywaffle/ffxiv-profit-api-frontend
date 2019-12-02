@@ -27,10 +27,11 @@ export default function Navbar() {
     if (window.location.hostname === "localhost") {
         homeURL = "http://localhost:3000"
     }
+
     var sections = [
         ["Home", homeURL],
-        ["API", "/api/home/"],
-        ["Documentation", "/api/home/documentation/"],
+        ["API", "/"],
+        ["Documentation", "/documentation"],
     ]
     return (
         <AppBar className={classes.appBar} color="default">

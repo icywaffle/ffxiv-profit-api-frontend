@@ -21,8 +21,8 @@ function DocumentationPage() {
 function Body() {
     return (
         <Router>
-            <Route path="/api/home/" exact component={HomePage} />
-            <Route path="/api/home/documentation/" component={DocumentationPage} />
+            <Route path="/" exact component={HomePage} />
+            <Route path="/documentation" component={DocumentationPage} />
         </Router>
     )
 }

@@ -37,10 +37,7 @@ function Home() {
 
     const classes = useStyles()
 
-    var imageSRC = "/api/home/images/"
-    if (window.location.hostname === "localhost") {
-        imageSRC = "/images/"
-    }
+    var imageSRC = "/images/"
 
     const techStacks = [
         {
@@ -102,7 +99,7 @@ function Home() {
                             justify="center"
                             alignItems="center">
                             <Grid item>
-                                <Button href="/api/home/documentation/" variant="contained" color="primary">
+                                <Button href="/documentation/" variant="contained" color="primary">
                                     Documentation
                                 </Button>
                             </Grid>
