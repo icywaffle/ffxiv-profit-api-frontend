@@ -30,6 +30,8 @@ export default function Navbar() {
     // If we're localhost, then we have to describe by port, otherwise map to main domain
     if (window.location.hostname === "localhost") {
         homeURL = "http://localhost:3000"
+    } else {
+        homeURL = window.location.protocol + "//" + homeURL
     }
 
     var sections = [
